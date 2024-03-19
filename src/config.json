@@ -19,6 +19,12 @@
             "explorerURL": "https://mumbai.polygonscan.com",
             "openseaURL": "https://testnets.opensea.io"
         },
+        "421614": {
+            "name": "Arbitrum Sepolia Testnet",
+            "isTestnet": true,
+            "explorerURL": "https://sepolia.arbiscan.io",
+            "openseaURL": "https://testnets.opensea.io"
+        },
         "137": {
             "name": "Polygon Mainnet",
             "isTestnet": false,

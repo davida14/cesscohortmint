@@ -38,6 +38,18 @@ module.exports = {
       network_id: 11155111, // This should match the Chain ID from MetaMask
     },
 
+    arbitrumSepolia: {
+      provider: function () {
+        return new HDWalletProvider(
+          process.env.DEPLOYER_PRIVATE_KEY,
+          `https://arbitrum-sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`
+        );
+      },
+      network_id: 421614, // Replace with the correct network ID for Arbitrum Sepolia
+      gas: 8000000, // Arbitrum has slightly higher block limits
+      gasPrice: 1000000000, // Adjust gas price as necessary, in wei
+    },
+
     matic: {
       provider: function () {
         return new HDWalletProvider(
