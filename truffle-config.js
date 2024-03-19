@@ -8,16 +8,6 @@ module.exports = {
       port: 7545,
       network_id: "5777", // Match any network id
     },
-
-    rinkeby: {
-      provider: function () {
-        return new HDWalletProvider(
-          [process.env.DEPLOYER_PRIVATE_KEY],
-          `wss://rinkeby.infura.io/ws/v3/${process.env.INFURA_API_KEY}` // URL to Ethereum Node
-        );
-      },
-      network_id: 4,
-    },
     goerli: {
       provider: function () {
         return new HDWalletProvider(
@@ -48,25 +38,6 @@ module.exports = {
       network_id: 421614, // Replace with the correct network ID for Arbitrum Sepolia
       gas: 8000000, // Arbitrum has slightly higher block limits
       gasPrice: 1000000000, // Adjust gas price as necessary, in wei
-    },
-
-    matic: {
-      provider: function () {
-        return new HDWalletProvider(
-          [process.env.DEPLOYER_PRIVATE_KEY],
-          `https://polygon-rpc.com`
-        );
-      },
-      network_id: 137,
-    },
-    mumbai: {
-      provider: function () {
-        return new HDWalletProvider(
-          [process.env.DEPLOYER_PRIVATE_KEY],
-          `https://polygon-mumbai.infura.io/v3/${process.env.INFURA_API_KEY}`
-        );
-      },
-      network_id: 80001,
     },
   },
 
